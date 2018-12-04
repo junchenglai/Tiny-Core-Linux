@@ -15,11 +15,10 @@ sudo /usr/local/etc/init.d/openssh start&
 # 更改默认用户 “tc” 的密码
 echo tc:password | sudo chpasswd
 
-# 编辑 ’ .filetool.1st ’ 文件
-sudo echo '/opt' >> /opt/.filetool.1st 
-sudo echo '/home' >> /opt/.filetool.1st
-sudo echo '/usr/local/etc/ssh' >> /opt/.filetool.1st 
-sudo echo '/etc/shadow' >> /opt/.filetool.1st
+# 编辑 ’.filetool.lst’ 文件
+sudo echo '/etc/resolv.conf' >> /opt/.filetool.lst
+sudo echo '/usr/local/etc/ssh' >> /opt/.filetool.lst 
+sudo echo '/etc/shadow' >> /opt/.filetool.lst
 
 # 编辑启动文件
 sudo chmod -R 777 /opt/bootlocal.sh
