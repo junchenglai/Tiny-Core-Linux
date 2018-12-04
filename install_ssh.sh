@@ -10,7 +10,7 @@ tce-load -wi openssh
 sudo cp /usr/local/etc/ssh/sshd_config.orig /usr/local/etc/ssh/sshd_config
 
 # 启动 SSH 服务
-/usr/local/etc/init.d/openssh start&
+sudo /usr/local/etc/init.d/openssh start&
 
 # 更改默认用户 “tc” 的密码
 echo tc:password | sudo chpasswd
