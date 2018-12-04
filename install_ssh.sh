@@ -28,4 +28,4 @@ sudo echo 'sudo cp /usr/local/etc/ssh/sshd_config.orig /usr/local/etc/ssh/sshd_c
 sudo echo 'sudo /usr/local/etc/init.d/openssh start' >> /opt/bootlocal.sh
 
 # 备份配置
-filetool.sh -b
+sudo filetool.sh -b
