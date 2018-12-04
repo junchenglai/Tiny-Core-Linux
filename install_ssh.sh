@@ -1,7 +1,7 @@
 # 配置 DNS 信息
-echo 'nameserver 114.114.114.114' >> /etc/resolv.conf
-echo 'nameserver 1.1.1.1' >> /etc/resolv.conf
-echo 'nameserver 8.8.8.8' >> /etc/resolv.conf
+sudo echo 'nameserver 114.114.114.114' >> /etc/resolv.conf
+sudo echo 'nameserver 1.1.1.1' >> /etc/resolv.conf
+sudo echo 'nameserver 8.8.8.8' >> /etc/resolv.conf
 
 # 安装 OpenSSH 包
 tce-load -wi openssh
