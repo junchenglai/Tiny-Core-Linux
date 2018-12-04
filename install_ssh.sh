@@ -4,7 +4,7 @@ echo 'nameserver 1.1.1.1' >> /etc/resolv.conf
 echo 'nameserver 8.8.8.8' >> /etc/resolv.conf
 
 # 安装 OpenSSH 包
-tce-load -wi openssh
+tce-load -wi openssh &&
 
 # 使用模板创建 SSH 配置文件
 sudo cp /usr/local/etc/ssh/sshd_config.orig /usr/local/etc/ssh/sshd_config
