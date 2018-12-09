@@ -14,16 +14,13 @@ sudo /usr/local/etc/init.d/openssh start&
 echo tc:password | sudo chpasswd
 
 # 编辑 ’.filetool.lst’ 文件
-sudo echo '/etc/resolv.conf' >> /opt/.filetool.lst
 sudo echo '/usr/local/etc/ssh' >> /opt/.filetool.lst 
 sudo echo '/etc/shadow' >> /opt/.filetool.lst
 
 # 编辑启动文件
-sudo chmod -R 777 /opt/bootlocal.sh
+sudo echo 'sudo adding dns 114.114.114.114' >> /opt/bootlocal.sh
 sudo echo 'sudo echo nameserver 114.114.114.114 >> /etc/resolv.conf' >> /opt/bootlocal.sh
-sudo echo 'sudo echo nameserver 1.1.1.1 >> /etc/resolv.conf' >> /opt/bootlocal.sh
-sudo echo 'sudo echo nameserver 8.8.8.8 >> /etc/resolv.conf' >> /opt/bootlocal.sh
-
+# sudo echo 'sudo /sbin/udhcpc' >> /opt/bootlocal.sh
 sudo echo 'echo tc:password | chpasswd' >> /opt/bootlocal.sh
 sudo echo 'sudo cp /usr/local/etc/ssh/sshd_config.orig /usr/local/etc/ssh/sshd_config' >> /opt/bootlocal.sh
 sudo echo 'sudo /usr/local/etc/init.d/openssh start' >> /opt/bootlocal.sh
