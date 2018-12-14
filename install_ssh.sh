@@ -7,8 +7,7 @@
 ##
 ##################################################################################
 
-# 安装 OpenSSL 和 OpenSSH 包
-tce-load -wi openssl
+# 安装 OpenSSH 包
 tce-load -wi openssh
 
 # 使用模板创建 SSH 配置文件
