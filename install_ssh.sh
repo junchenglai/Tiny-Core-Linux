@@ -7,7 +7,8 @@
 ##
 ##################################################################################
 
-# 安装 OpenSSH 包
+# 安装 OpenSSL 和 OpenSSH 包
+tce-load -wi openssl
 tce-load -wi openssh
 
 # 使用模板创建 SSH 配置文件
@@ -24,6 +25,7 @@ sudo echo '/usr/local/etc/ssh' >> /opt/.filetool.lst
 sudo echo '/etc/shadow' >> /opt/.filetool.lst
 
 # 编辑启动文件
+sudo chmod -R 777 /opt/bootlocal.sh
 sudo echo 'echo tc:password | chpasswd' >> /opt/bootlocal.sh
 sudo echo 'sudo cp /usr/local/etc/ssh/sshd_config.orig /usr/local/etc/ssh/sshd_config' >> /opt/bootlocal.sh
 sudo echo 'sudo /usr/local/etc/init.d/openssh start' >> /opt/bootlocal.sh
